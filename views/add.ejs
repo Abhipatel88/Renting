@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+    <link rel="stylesheet" href="/css/add.css">
+  <link rel="stylesheet" href="/css/nav.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="/img/logo-with.png" type="image/x-icon">
+  <!-- locomotive css cdn  -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+/>
+</head>
+<body>
+<div id="main">
+    
+    <nav>
+        <div class="l">
+          <img src="/img/logowithout.png" alt="">
+        </div>
+        <div class="m">
+          <a href="/home">Home</a>
+          <a  href="/item">Items</a>
+          <a href="/history">Histroy</a>
+          <a class="current" href="/add">Add Items</a>
+          <a href="/order">My Orders</a>
+
+        </div>
+        <div class="r">
+          <a href="/cart"><i class="ri-shopping-cart-2-line"></i></a>
+
+          <h3><%= user.username  %></h3>
+          <div class="div">
+            <a class="" href="/profile"><img src="/img/upload/<%= user.profilepic  %>" alt=""></a>
+          </div>
+          <a class="logout" href="/logout">Logout</a>
+        </div>
+
+      </nav>
+    <div class="page1">
+        <div class="box">
+            
+            <form id="fileform" method="post" enctype="multipart/form-data" action="/post">
+                <div class="div">
+                    <h1>Add Products</h1>
+                    <img class="profile" id="im" src="" alt="">
+                </div>
+                <div class="r">
+                    <!-- <button id="editbtn" class="editimage" ">Add Images</button> -->
+                    <input id="selectedFile" type="file" name="image" onclick="document.getElementById('selectedFile').click()"">
+                    <label for="">Product_Title</label>
+                    <input type="text" id="name" name="title" value="" placeholder="Enter Your Product Title">
+                    <label for="text">Product Description</label>
+                    <input type="text" id="email" name="description" value="" placeholder="Enter Your Description">
+                    <label for="furniture">Choose a piece of furniture:</label>
+                    <select id="furniture" name="type">
+                        <option value="sofa">Sofa</option>
+                        <option value="chair">Chair</option>
+                        <option value="table">Table</option>
+                        <option value="bed">Bed</option>
+                        <option value="cabinet">Cabinet</option>
+                        <option value="shelf">Shelf</option>
+                        <option value="lamp">Lamp</option>
+
+
+                        <!-- <option value="desk">Desk</option> -->
+                    </select>
+                    <label for="price">Price</label>
+                    <input type="text" id="password" name="price" value="" placeholder="Enter Your Price">
+                    <button class="update" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--locomotive js --> 
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<!--gsap  --> 
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+ <!--Scroll tigger  --> 
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="/js/item.js"></script>
+ 
+    <script>
+        let im= document.getElementById("im");
+        let ins=document.getElementById("selectedFile");
+        ins.onchange= function(){
+            im.src=URL.createObjectURL(ins.files[0])
+        }
+    </script>
+</body>
+</html>

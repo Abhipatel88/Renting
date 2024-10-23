@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Address</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/adress.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="shortcut icon" href="/img/logo-with.png" type="image/x-icon">
+  <!-- locomotive css cdn  -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+/>
+</head>
+<body>
+    <div id="main">
+
+    <nav>
+        <div class="l">
+            <!-- <i class="ri-arrow-go-back-line"></i> -->
+            <a href="/home"><i class="ri-arrow-left-line"></i></a>
+            <img src="/img/logowithout.png" alt="">
+            </div>
+        <div class="r">
+            <a href="/cart"><i class="ri-shopping-cart-2-line"></i></a>
+                
+                <div class="links">
+                    <a  href="/profile">Profile</a>
+                    <a class="current" href="/address">Add Adress</a>
+                    <a class="logout" href="/logout">Logout</a>
+                </div>
+        </div>
+    </nav>
+    <div class="page">
+    <div class="container mt-5">
+        <h2 class="mb-4">Your Addresses</h2>
+        <button class="btn btn-dark mb-3" onclick="toggleAddressForm()">Add New Address</button>
+        
+        <div id="addressForm" style="display: none;">
+            <form action="/address" method="post">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" name="number" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine1">Address Line 1</label>
+                    <input type="text" name="address1" class="form-control" id="addressLine1" placeholder="Enter address line 1">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine2">Address Line 2</label>
+                    <input type="text" name="address2" class="form-control" id="addressLine2" placeholder="Enter address line 2">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <input type="text" name="city" class="form-control" id="city" placeholder="Enter your city">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State</label>
+                        <input type="text" name="state" class="form-control" id="state" placeholder="Enter your state">
+                        
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="zipCode">Zip Code</label>
+                        <input type="text" name="zipcode" class="form-control" id="zipCode" placeholder="Enter zip code">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="add">
+
+    <% address.forEach(function(a){ %>
+
+    <div class="card w-75 border-3" >
+        <div class="card-body">
+          <h5 class="card-title"><%= a.fullName  %></h5>
+          <p class="card-text"><%= a.phoneNumber  %></p>
+          <p class="card-text"><%= a.addressLine1  %></p>
+          <p class="card-text"><%= a.addressLine2  %></p>
+
+
+
+
+          <a href="#" class="btn btn-primary">Edit</a>
+        </div>
+      </div>
+  <%  }) %>
+</div>
+</div>
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--locomotive js --> 
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+   <!--gsap  --> 
+   <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+    <!--Scroll tigger  --> 
+   <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+     integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+   <script src="/js/item.js"></script>
+    <script>
+
+        function toggleAddressForm() {
+            const form = document.getElementById('addressForm');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

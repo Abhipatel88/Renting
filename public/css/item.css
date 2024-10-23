@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    
+}
+.page1,.page2,.page3,.page4,.page5,.page6,.page7{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: darkblue; */
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0.5rem 5rem;
+    .top{
+        width: 100%;
+        padding: 1rem;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+        button{
+            padding: 0.5rem 3rem;
+            color: white;
+            background-color: orangered;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+    .cards{
+       /* background-color: darkblue; */
+        width: 100%;
+        height: 100%;
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            /* background-color: gold; */
+          }
+      
+          .swiper-slide {
+            text-align: start;
+            font-size: 18px;
+            /* background: #873d3d; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 !important;
+          }
+      
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .card{
+            .img-post{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                overflow: hidden;
+                /* border-radius: 10px; */
+                /* background-color: lightblue; */
+                /* padding: 1rem; */
+                /* margin-bottom: 1rem; */
+            }
+          }
+          .card-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            /* background-color: darkcyan; */
+            padding: 0rem 0.5rem;
+            .t{
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                flex-direction: column;
+                /* background-color: firebrick; */
+                padding: 0.2rem 0rem;
+                .tt{
+                    display: flex;
+                    gap: 8px;
+                    /* width: 100%; */
+                    p{
+
+                        color: gray
+                    }
+                }
+
+            }
+            h4{
+                font-weight: 400;
+                font-size: 1.3rem;
+                color: #FFE140;
+                i{
+                    color: gold;
+
+                }
+            }
+
+          }
+          .div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            /* background-color: powderblue; */
+            padding:0.2rem 0.5rem;
+            .div-l{
+                width: 50%;
+                /* background-color: forestgreen; */
+                height: 100%;
+                display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 5px;
+           
+            button{
+                padding: 0.1rem 0.5rem;
+                background-color: rgb(0, 13, 158);
+                border: none;
+                border-radius: 5px;
+                color: white;
+
+            }
+            .cart{
+                background-color: coral;
+            }
+            }
+            .div-r{
+                width: 50%;
+                /* background-color: rgb(12, 18, 12); */
+                height: 100%;
+                display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 5px;
+            h5{
+                font-weight: 400;
+                display: block;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .img{
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: darkblue;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+                
+            }
+          }
+    }
+}
+
+

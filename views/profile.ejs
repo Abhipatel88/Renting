@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="/img/logo-with.png" type="image/x-icon">
+ 
+</head>
+<body>
+<div id="main">
+    <nav>
+        <div class="l">
+            <!-- <i class="ri-arrow-go-back-line"></i> -->
+            <a href="/home"><i class="ri-arrow-left-line"></i></a>
+            <img src="/img/logowithout.png" alt="">
+            </div>
+        <div class="r">
+            <a href="/cart"><i class="ri-shopping-cart-2-line"></i></a>
+                
+                <div class="links">
+                    <a class="current" href="#">Profile</a>
+                    <a href="/address">Add Adress</a>
+                    <a class="logout" href="/logout">Logout</a>
+                </div>
+        </div>
+    </nav>
+    <form hidden id="fileform" method="post" enctype="multipart/form-data" action="/uploadd">
+        <input id="file" type="file" name="image">
+      </form>
+    <div class="page1">
+        <div class="box">
+            <h1>Edit Profile</h1>
+            <div class="div">
+                <label for="profilepic">Profile Picture</label>
+                <img class="profile" src="/img/upload/<%= user.profilepic  %>" alt="">
+                <button id="editbtn" class="editimage">Edit picture</button>
+            </div>
+            <form action="/update" method="post" >
+                <label for="name">Name</label>
+                <input type="text" id="name" name="username" value="<%= user.username  %>">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="<%= user.email  %>">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="<%= user.password  %>">
+                <button class="update" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector("#editbtn").addEventListener("click", function(){
+      document.querySelector("#file").click();
+    })
+
+    document.querySelector("#file")
+    .addEventListener("change", function(){
+      document.querySelector("#fileform").submit();
+    });
+    
+
+    document.querySelector("#remove").addEventListener("click",function(){
+      document.querySelector(".pro").src="/img/upload/default.jpeg"
+      // console.log("hjsfbsdifbsduibfuibsuidfiudsfuihshuifhsuihfuisdhifuhsihfih");
+    })
+
+  </script>
+</body>
+</html>

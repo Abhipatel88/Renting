@@ -1,0 +1,93 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Ubuntu", sans-serif;
+
+    }
+    html , body{
+        height: 100%;
+        width: 100%;
+        font-family: "Ubuntu", sans-serif;
+
+    }
+    nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    /* background-color: saddlebrown; */
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 0rem 5rem;
+
+    .l{
+        width: 30%;
+        height: 100%;
+        img{
+            height: 5rem;
+        }
+    }
+    .m{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 40%;
+        height: 100%;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+        .current{
+            border-bottom: 2px solid black;;
+        }
+    }
+    .r{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 15px;
+        width: 30%;
+        height: 100%;
+        i{
+            font-size: 2rem;
+        }
+        h3{
+            font-family: "Roboto", sans-serif;
+            font-style: italic;
+            font-size: 1.3rem;
+        }
+        .div{
+            width: 50px;
+            height: 50px;
+            background-color: salmon;
+            border-radius: 50%;
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            img:hover{
+                scale: 1.2;
+                border: 2px solid black;
+                transition: all ease-in 0.5s;
+            }
+        }
+        .logout{
+            text-decoration: none;
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+        }
+        .logout:hover{
+            background-color: #ff735c;
+            transition: all ease-in-out 0.5s;
+            color: white;
+            border: none;
+        }
+    }
+}

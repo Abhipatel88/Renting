@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.page1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    /* background-color: rgb(167, 114, 114); */
+    /* background-color: rgb(189, 216, 240); */
+
+    border-radius: 10px;
+    .box{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        /* flex-direction: column; */
+        width: 70%;
+        height: 80%;
+        padding: 1rem;
+        /* border: 3px solid rgb(31, 31, 31); */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 10px;
+        /* background-color: saddlebrown; */
+        background-color: aliceblue;
+
+        h1{
+            padding: 0.5rem 3rem;
+
+        }
+        
+        form{
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            /* flex-direction: column; */
+            padding: 0.5rem 3rem;
+            width: 100%;
+            height: 100%;
+            .div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0.5rem 1rem;
+                width: 40%;
+                height: 100%;
+                gap: 15px;
+                /* background-color: darkblue; */
+                /* background-color: saddlebrown; */
+                h1{
+                    margin-bottom: 15px;
+                    /* font-size: ; */
+                    width: 100%;
+                    /* background-color: floralwhite; */
+                }
+                .profile{
+                    width: 250px;
+                    height: 250px;
+                    background-color: salmon;
+                    /* border-radius: 50%; */
+                    border-radius: 5px;
+                }
+                .editimage{
+                    padding: 0.5rem 2rem;
+                    background-color: #ff735c;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                }
+            }
+            h1{
+                margin-bottom: 10px;
+            }
+            .r{
+                width: 60%;
+                height: 100%;
+                /* background-color: firebrick; */
+                padding: 0rem 3rem;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+            }
+            #file{
+                display: none;
+            }
+            #selectedFile{
+                border: none;
+                box-shadow: none;
+                height: 4rem;
+
+            }
+            input{
+                width: 80%;
+                height: 3rem;
+                display: block;
+                border: none;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                padding: 1rem;
+                margin-top: 7px;
+            }
+            label{
+                margin-top: 7px;
+            }
+            
+            .update{
+                padding: 0.5rem 2rem;
+                background-color: #ff735c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+        }
+    }
+}

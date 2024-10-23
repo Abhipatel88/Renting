@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .l {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box {
+      width: 80%;
+      height: 80%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .r {
+    width: 50%;
+    height: 100%;
+    /* background-color: darkmagenta; */
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 3rem;
+    h1 {
+      span {
+        color: grey;
+        font-size: 1.3rem;
+      }
+    }
+    .pin {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      /* background-color: darkcyan; */
+      height: 5rem;
+      .pin-t {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        gap: 5px;
+
+        input {
+          width: 60%;
+          padding: 0.5rem;
+          /* margin-top: 1rem; */
+          /* background-color: firebrick; */
+        }
+        .btn {
+          padding: 0.7rem 1.5rem;
+          border: none;
+          color: white;
+          background-color: coral;
+        }
+      }
+    }
+    .buy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      button {
+        padding: 0.5rem 2rem;
+        border: none;
+        color: white;
+        background-color: orangered;
+        border-radius: 5px;
+        img {
+          height: 30px;
+        }
+      }
+      .cart {
+        background-color: rgb(110, 188, 255);
+        /* color: rgb(255, 255, 255); */
+      }
+    }
+    .review {
+      width: 100%;
+      height: 6rem;
+      /* background-color: gainsboro; */
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      margin-top: 20px;
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        width: 100%;
+        input {
+          width: 60%;
+          padding: 0.5rem;
+          background-color: transparent;
+          border-radius: 5px;
+          border: 0.5px solid black;
+          /* margin-right: 10px; */
+          /* background-color: darkcyan; */
+        }
+        .type {
+          /* width: 30%; */
+          border: none;
+          height: 2rem;
+        }
+        .ri-star-s-fill {
+          font-size: 1.5rem;
+          color: gold;
+        }
+        button {
+          padding: 0.5rem 1rem;
+          border: none;
+          background-color: yellow;
+          color: black;
+          border-radius: 5px;
+        }
+      }
+    }
+    .comments{
+      width: 100%;
+      /* min-height: 10rem; */
+      /* background-color: gray; */
+      /* padding: 1rem; */
+      .re {
+        width: 100%;
+        height: 5rem;
+        /* background-color: lightcoral; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        padding: 1rem;
+        border: 1px solid black;
+
+        .ls {
+          width: 30%;
+          height: 100%;
+          /* background-color: firebrick; */
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 10px;
+          border-right: 1px solid black;
+          .pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+        .rs {
+          width: 70%;
+          height: 100%;
+          /* background-color: darkcyan; */
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          padding: 1rem;
+          h6{
+            font-weight: 400;
+          }
+          h4{
+            font-weight: 400;
+            i{
+                color: gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

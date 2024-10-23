@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/logo-with.png" type="image/x-icon">
+      <!-- locomotive css cdn  -->
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>  
+<body>
+<div id="main">
+    
+<nav>
+  <div class="l">
+      <img src="/img/logowithout.png" alt="">
+      </div>
+      <div class="m">
+          <a class="current" href="/home">Home</a>
+          <a href="/item">Items</a>
+          <a href="/history">Histroy</a>
+          <a href="/add">Add Items</a>
+          <a href="/order">My Orders</a>
+
+      </div>
+      <div class="r">
+          <a href="/cart"><i class="ri-shopping-cart-2-line"></i></a>
+          <h3 ><%= user.username  %></h3   >
+          <div class="div">
+              <a class="" href="/profile"><img src="/img/upload/<%= user.profilepic  %>" alt=""></a>
+          </div>
+          <a class="logout" href="/logout">Logout</a>
+      </div>
+      
+  </nav>
+        <div class="page1">
+            <h1>Welcome to Renting Ki Duniya</h1>
+            <p>Discover new Products around you</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/img/kabat.jpeg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/bed.jpeg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/table.jpeg" alt="">
+                  </div>
+                  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+        <div class="page2">
+         <div class="top">
+          <div class="box">
+            <div class="mini-box">
+              <i class="ri-heart-line"></i>
+              <h2>100%</h2>
+              <p>Satisfied</p>
+          </div>
+          <div class="mini-box">
+            <i class="ri-truck-line"></i>
+            <h2>30+</h2>
+            <p>City Available</p>
+        </div>
+        <div class="mini-box">
+          <i class="ri-shopping-cart-2-line"></i>
+          <h2>100+</h2>
+          <p>Products</p>
+      </div>
+      <div class="mini-box">
+        <i class="ri-customer-service-line"></i>
+        <h2>24/7</h2>
+        <p>Customer Support</p>
+    </div>
+         </div>
+        </div>
+        <div class="bottom">
+          <div class="l">
+            <div class="swiper4 mySwiper4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/img/morden-twable.jpeg" alt="">
+                  <div class="te">
+                    <h1>Released <br> New Style</h1>
+                    <button>Order Now</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/img/morden-chir.jpeg" alt="">
+                </div>
+                
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="r-t">
+              <div class="r-t-l">
+                <h1>Core Dining Chair</h1>
+                <p>Core Dining Chair by Cane Line
+                  Design by Foersom & Hiort-Lorenzen MDD</p>
+                  <button>Shop Now</button>
+              </div>
+              <div class="r-t-r">
+                <img src="/img/vincent-sheppard-gipsy-dining-chair-cushion.png" alt="">
+              </div>
+            </div>
+            <div class="r-b">
+              <div class="r-b-l">
+                <img src="/img/o.jpeg" alt="">
+              </div>
+              <div class="r-b-r">
+                <h1>White Comfort Chairs</h1>
+                <p>Hot Sale Dining Room Furniture Luxury Metal restaurant chairs modern luxury </p>
+                <button>Shop Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="page3" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+          <div class="t">
+            <h1>Our Category</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quas?</p>
+          </div>
+          <div class="swiper2 mySwiper2" data-scroll data-scroll-speed="0.5" data-scroll-direction="horizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="/all">
+                  
+                  <img src="/img/primium.jpeg" alt="">
+                  <h4>All Products</h4>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/almari">
+
+                  <img src="/img/almari.jpeg" alt="">
+                  <h4>Almari</h4>
+                </a>
+
+              </div>
+              <div class="swiper-slide">
+                <a href="/bed">
+
+                  <img src="/img/bed-c.jpeg" alt="">
+                  <h4>Bed</h4>
+                </a>
+
+              </div>
+              <div class="swiper-slide">
+                <a href="/shlef">
+
+                  <img src="/img/mate.jpeg" alt="">
+                  <h4>Materess</h4>
+                </a>
+
+                
+              </div>
+              <div class="swiper-slide">
+                <a href="/sofa">
+
+                  <img src="/img/sofa-c.jpeg" alt="">
+                  <h4>Sofa</h4>
+                </a>
+
+              </div>
+              <div class="swiper-slide">
+                <a href="/table">
+
+                  <img src="/img/dianing.jpeg" alt="">
+                  <h4>Dianing Table</h4>
+                </a>
+
+              </div>
+              <div class="swiper-slide">
+                <a href="/chair">
+
+                  <img src="/img/chair.png" alt="">
+                  <h4>Moreden Chair</h4>
+                </a>
+
+              </div>
+            </div>
+            <div class="swiper-paginations"></div>
+          </div>
+        
+        </div>
+
+        <div class="page4" data-scroll data-scroll-speed="0.5" data-scroll-direction="vertical">
+          <div class="l">
+            <img src="/img/sales-removebg-preview.png" alt="">
+
+          </div>
+          <div class="r">
+            <p>Best Sofa Sale</p>
+            <h1>Sales End In 1 Day</h1>
+            <button>Order Now</button>
+          </div>
+        </div>
+
+        <div class="page5" data-scroll data-scroll-speed="0.8" >
+          <div class="l">
+            <p class="ss">Best Furniture</p>
+            <h1>Buy or Rent Furniture is now
+              made easier.</h1>
+              <p>The Winning Offer Doesn't Always Have To Be The
+                Highest. Our Furniture Buying Agent Help With Making
+                The Best Offer For Your Situation. We Always Include
+                Technical Checks, Reservation Of Funding, And When
+                To Move In Our Final Bidding Strategy. Thanks To
+                Furniture Rental You No Longer need to Worries.</p>
+            <button>Know More</button>
+          </div>
+          <div class="r">
+            <img src="/img/wd.png" alt="">
+          </div>
+        </div>
+
+        <div class="page7">
+          <div class="up">
+              <h4>CLIENT REVIEWS</h4>
+              <h2>We Build In Trust With Our <br> Clients & Agents</h2>
+          </div>
+          <div class="down">
+              <div class="swiper MySwiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <img src="img/5star.png" alt="">
+                          <p>"This plugin is amazing with the current <br>
+                              version, I can't imagine it, how cool will it <br>
+                              be when you finished the all "
+                          </p>
+                          <div class="profile">
+                              <img src="img/profileImg1.png" alt="profile">
+                              <h3>Michele Smith <br>
+                                  <span>CDO of Weblabx</span>
+                              </h3>
+                              <div class="box"></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="img/5star.png" alt="">
+                          <p>"
+                              Furniture Rental Hub was amazing! Found Great Furniture easily & the process
+                              was a breeze. Highly recommend! "
+                          </p>
+                          <div class="profile">
+                              <img src="img/profileImg2.png" alt="profile">
+                              <h3>David Andersin <br>
+                                  <span>Satisfied User</span>
+                              </h3>
+                              <div class="box"></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="img/4star.png" alt="">
+                          <p>"Finally, a Furniture Buy/Rent platform that's user-friendly. Found several Furniture in my budget
+                              with all the necessary details. Saved me tons of time searching elsewhere."
+                          </p>
+                          <div class="profile">
+                              <img src="img/profileImg3.png" alt="profile">
+                              <h3>Marco Villy <br>
+                                  <span>Satisfied User</span>
+                              </h3>
+                              <div class="box"></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="img/5star.png" alt="">
+                          <p>"This plugin is amazing with the current <br>
+                              version, I can't imagine it, how cool will it <br>
+                              be when you finished the all "
+                          </p>
+                          <div class="profile">
+                              <img src="img/profileImg4.png" alt="profile">
+                              <h3>Neal Schaffer <br>
+                                  <span>Friend</span>
+                              </h3>
+                              <div class="box"></div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="img/4star.png" alt="">
+                          <p>"The Furniture Rental Hub has been a valuable tool for connecting me with potential tenants.
+                              The platform is efficient and helps me manage listings effortlessly. "
+                          </p>
+                          <div class="profile">
+                              <img src="img/profileImg5.png" alt="profile">
+                              <h3>Mike Walter <br>
+                                  <span>Our Agent</span>
+                              </h3>
+                              <div class="box"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="page9">
+        <div class="box">
+            <img src="img/contact-home.png" alt="">
+            <h2><span>Get Best Furniture</span> for<br> your home </h2>
+            <p>Put your email address and get listed</p>
+            <input type="text" name="" placeholder="Enter your email address"
+                autocomplete="off">
+            <button>
+                <a href="#">Get Listed</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="page10">
+        <h3>All right Reserved @FurnitureRental, 2024</h3>
+        <div class="menu">
+            <a href="#">services</a>
+            <a href="#">Partners</a>
+            <a href="#">Feedbacks</a>
+            <a href="#">Booking</a>
+        </div>
+    </div>
+    </div>
+    <!--locomotive js --> 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!--gsap  --> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+     <!--Scroll tigger  --> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+      
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        }, autoplay: {
+    delay: 3000,
+  },
+  speed: 2000,
+  slidersPerView: 1,
+  effect: "fade",
+      });
+
+      
+  var swiper4 = new Swiper(".mySwiper4", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      }, autoplay: {
+    delay: 3000,
+  },
+  speed: 2000,
+  slidersPerView: 1,
+  effect: "fade",
+    });
+      var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    var swiper3 = new Swiper(".MySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true
+      },
+  });
+
+    </script>
+    
+</body>
+<!-- </html> -->
